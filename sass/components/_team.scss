@@ -1,6 +1,8 @@
 @import "../base/title";
 .team {
   background: #f5f4fa;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .team-title {
   @extend .title;
@@ -34,11 +36,9 @@
   color: var(--secondary-text-color);
 }
 .team-social-list {
-  padding-right: 122px;
-  padding-left: 122px;
   padding-bottom: 24px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .team-social-link {
   display: flex;

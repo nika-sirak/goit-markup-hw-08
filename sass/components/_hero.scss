@@ -23,9 +23,6 @@
 }
 .hero .container {
   padding-top: 118px;
-  padding-bottom: 118px;
-  padding-left: 60px;
-  padding-right: 60px;
   text-align: center;
 }
 .hero-title {
@@ -51,10 +48,6 @@
       ),
       url(../images/hero/hero-tablet.jpg);
   }
-  .hero .container {
-    padding-left: 204px;
-    padding-right: 204px;
-  }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 481px),
   screen and (min-resolution: 192dpi) and (min-width: 481px),
@@ -78,9 +71,6 @@
   }
   .hero .container {
     padding-top: 200px;
-    padding-bottom: 200px;
-    padding-left: 237px;
-    padding-right: 237px;
   }
   .hero-title {
     font-size: 44px;

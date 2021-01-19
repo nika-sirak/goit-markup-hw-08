@@ -117,6 +117,7 @@
   .projects-list {
     display: flex;
     flex-wrap: wrap;
+    align-content: stretch;
     margin: -15px;
   }
   .projects-list-item {
