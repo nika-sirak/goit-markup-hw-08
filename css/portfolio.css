@@ -567,6 +567,11 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .projects-links {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
   .category-list {
     justify-content: center;
     margin-bottom: 30px;
@@ -579,6 +584,9 @@ img {
   .projects-list-item {
     margin: 15px;
     width: calc((100% - 4 * 15px) / 2);
+  }
+  .projects-content {
+    flex-grow: 1;
   }
 }
 

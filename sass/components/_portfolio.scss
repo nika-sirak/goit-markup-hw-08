@@ -111,6 +111,11 @@
   color: var(--secondary-text-color);
 }
 @media screen and (min-width: 768px) {
+  .projects-links {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
   .category-list {
     justify-content: center;
     margin-bottom: 30px;
@@ -124,14 +129,11 @@
     margin: 15px;
     width: calc((100% - 4 * 15px) / 2);
   }
+  .projects-content {
+    flex-grow: 1;
+  }
 }
-// @media screen and (min-width: 320px) and (max-width: 1199px) {
-//   .projects-list-item:first-child {
-//     .projects-content {
-//       min-height: 143px;
-//     }
-//   }
-// }
+
 @media screen and (min-width: 1200px) {
   .projects .container {
     padding-top: 94px;
