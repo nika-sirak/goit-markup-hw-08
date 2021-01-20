@@ -116,6 +116,8 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
+  color: #000000;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-button:hover .icon-close,
@@ -148,7 +150,7 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .navigation {
     justify-content: space-between;
   }
@@ -476,7 +478,7 @@ img {
   margin-right: 8px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .projects-list-item {
     margin-bottom: 30px;
   }
@@ -581,7 +583,7 @@ img {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 320px) and (max-width: 1199px) {
   .projects-list-item:first-child .projects-content {
     min-height: 143px;
   }
