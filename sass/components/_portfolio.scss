@@ -5,17 +5,18 @@
 .category-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: -15px;
+  margin-right: -8px;
   margin-bottom: 40px;
 }
-.category-list-item:not(:last-child) {
+.category-list-item {
+  margin-top: 15px;
   margin-right: 8px;
 }
+
 @media screen and (max-width: 767px) {
   .projects-list-item {
     margin-bottom: 30px;
-  }
-  .category-list-item:nth-last-child(-n + 2) {
-    margin-top: 15px;
   }
 }
 .category-btn {
@@ -128,7 +129,7 @@
 @media screen and (max-width: 1199px) {
   .projects-list-item:first-child {
     .projects-content {
-      padding-bottom: 56px;
+      min-height: 143px;
     }
   }
 }

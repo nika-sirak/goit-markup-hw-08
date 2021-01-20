@@ -133,6 +133,13 @@ img {
   background-color: transparent;
 }
 
+.menu-button:hover .icon-close,
+.menu-button:focus .icon-close,
+.menu-button:hover .icon-menu,
+.menu-button:focus .icon-menu {
+  color: var(--accent-text-color);
+}
+
 .menu-button .icon-close {
   display: none;
 }
@@ -141,6 +148,11 @@ img {
   .menu-button {
     display: none;
   }
+}
+
+.icon-menu,
+.icon-close {
+  fill: currentColor;
 }
 
 .menu-button.is-open .icon-close {
@@ -190,7 +202,6 @@ img {
 .nav-list-link {
   position: relative;
   display: block;
-  padding-bottom: 12px;
   color: var(--primary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -222,8 +233,9 @@ img {
 }
 
 .current {
-  color: var(--accent-text-color);
   display: inline-block;
+  padding-bottom: 12px;
+  color: var(--accent-text-color);
 }
 
 .current::after {
@@ -240,7 +252,6 @@ img {
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: flex;
-    justify-content: space-between;
   }
   .logo.dark {
     margin-right: 88px;
@@ -275,6 +286,9 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .logo.dark {
+    margin-right: 93px;
+  }
   .nav-list {
     margin-right: 305px;
   }
@@ -414,7 +428,7 @@ img {
 .benefits-desc {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.714;
+  line-height: 1.7143;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
@@ -543,6 +557,7 @@ img {
 }
 
 .team-list-item {
+  margin-bottom: 30px;
   background-color: #ffffff;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -603,7 +618,7 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .team .container {
+  .team {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -682,7 +697,7 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .customers .container {
+  .customers {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -847,8 +862,8 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -873,7 +888,6 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 450px;
-    width: 100%;
     min-height: 581px;
   }
 }
@@ -905,6 +919,12 @@ img {
   fill: var(--accent-text-color);
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -924,14 +944,20 @@ img {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .modal-field:focus-within,
+  .modal-field-comment:focus-within {
+    color: var(--accent-text-color);
+  }
+}
+
 .modal-label {
-  display: inline-block;
+  display: block;
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
-  color: var(--secondary-text-color);
 }
 
 .modal-input-wrapper {
@@ -992,8 +1018,8 @@ img {
 
 .modal-field-policy {
   position: relative;
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -1029,8 +1055,8 @@ img {
 .modal-label-policy,
 .modal-link-policy {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
@@ -1047,6 +1073,20 @@ img {
   padding: 10px 55px;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
+  .modal-field-policy {
+    justify-content: center;
+  }
+  .modal-label-policy,
+  .modal-link-policy {
+    font-size: 14px;
+    line-height: 1.714;
+  }
+}
+
 .projects .container {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1055,19 +1095,19 @@ img {
 .category-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: -15px;
+  margin-right: -8px;
   margin-bottom: 40px;
 }
 
-.category-list-item:not(:last-child) {
+.category-list-item {
+  margin-top: 15px;
   margin-right: 8px;
 }
 
 @media screen and (max-width: 767px) {
   .projects-list-item {
     margin-bottom: 30px;
-  }
-  .category-list-item:nth-last-child(-n + 2) {
-    margin-top: 15px;
   }
 }
 
@@ -1172,7 +1212,7 @@ img {
 
 @media screen and (max-width: 1199px) {
   .projects-list-item:first-child .projects-content {
-    padding-bottom: 56px;
+    min-height: 143px;
   }
 }
 
