@@ -41,6 +41,9 @@
   display: flex;
   justify-content: center;
 }
+.team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
 .team-social-link {
   display: flex;
   justify-content: center;
